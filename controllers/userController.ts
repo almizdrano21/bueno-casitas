@@ -1,12 +1,28 @@
 import { Request, Response } from "express"
+
+interface PageOptions {
+  title: string,
+  heading?: string
+}
+
+/**
+ * Ver si puedo crear una interfaz para las funciones estas
+ * @param req 
+ * @param res 
+ */
+
 export const loginForm = (req: Request, res: Response) => {
-    res.render("auth/login.pug", {
-    });
-  
+  const loginPage: PageOptions = {
+    title: "Sign up",
+    heading: "Log in to your account"
+  }
+    res.render("auth/login.pug", loginPage);
 };
-
 export const registerForm = (req: Request, res: Response) => {
-  res.render("auth/register.pug", {
-  });
+  const registerPage: PageOptions = {
+    title: "Sign in",
+    heading: "Create an account"
+  }
+  res.render("auth/register.pug", registerPage);
 
-};
+}; 

@@ -7,7 +7,7 @@
     "start": "nodemon app.ts",
     "lint": "eslint . --ext .ts",
     "test": "test",
-    "css": "postcss public/styles/tailwind.css -o public/styles/app.css"
+    "css": "postcss public/styles/tailwind.css -o public/styles/app.css --watch"
   },
   "keywords": [
     "MVC",
