@@ -1,9 +1,8 @@
 import express from 'express'
+import {loginForm, registerForm} from "../controllers/userController"
+const router = express.Router()
 
-const userRouter = express.Router()
+router.get('/login', loginForm)
+router.get('/register', registerForm)
 
-userRouter.get('/', (req, res) => {
-    res.send('Buenas tardes')
-})
-
-export default userRouter
+export default router
