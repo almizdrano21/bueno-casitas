@@ -24,5 +24,11 @@ export const registerForm = (req: Request, res: Response) => {
     heading: "Create an account"
   }
   res.render("auth/register.pug", registerPage);
-
-}; 
+};
+export const forgotPassword = (req: Request, res: Response) => {
+  const forgotPasswordPage: PageOptions = {
+    title: "Forgot password",
+    heading: "Recover your password for Bueno Casitas"
+  }
+  res.render("auth/forgotPassword", forgotPasswordPage)
+} 
